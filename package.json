@@ -1,10 +1,11 @@
 {
   "name": "basic-webpack-react-sass-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "a lightweight template for new projects with webpack, react, and scss",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
