@@ -6,5 +6,3 @@ From the command line inside the root folder, run `npm install`. The resulting f
 
 `npm start` will start the dev-server.
 `npm run build` will create the bundle inside a folder called `dist/`.
-
-Suggestions are welcome!
