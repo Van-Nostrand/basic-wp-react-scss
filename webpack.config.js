@@ -26,14 +26,27 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('node-sass'),
-              sassOptions: {
-                file: "src/sass/main.scss",
-                outFile: "public/style.css"
-              }
+              implementation: require('sass'),
             }
           }
         ]
+      },
+      {
+        test: /\.(jpe?g|svg|png|gif)$/,
+        type: "asset/resource"
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: "[name].[ext]",
+              outputPath: 'fonts/'
+            }
+          }
+        ] 
       },
       {
         test: /\.css$/,
@@ -58,5 +71,9 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  devtool: 'source-map',
+  devServer: {
+    historyApiFallback: true
+  }
 }
