@@ -1,13 +1,9 @@
 import React from "react";
 import "../scss/main.scss";
 
-class App extends React.Component{
+export default function App() {
 
-  render(){
-    return(
-      <div>THE APP</div>
-    )
-  }
+  return(
+    <div>THE APP</div>
+  )
 }
-
-export default App;
